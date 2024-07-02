@@ -153,8 +153,6 @@ body{
         }
     }
 }
-
-
 @media(min-width: 650px){
     main{
         display: flex;
@@ -166,7 +164,7 @@ body{
     }
     .container{
         width: 85%;
-        max-width: 650px;
+        max-width: 600px;
         border-radius: 25px;
     }
     .card{
@@ -175,6 +173,71 @@ body{
         // height: 80vh;
         &__left{
             border-radius: 25px;
+            padding-top: 2em;
+            padding-bottom: 3em;
+            &-title{
+                font-size: calc(24rem/16); //check
+            }
+            &-circle{
+                // @include flexCenter(column);
+                width: 175px;
+                height: 175px;
+                margin: 1.8em auto;
+    
+                .score{
+                    font-size: calc(68rem/16);
+                }
+                .of{
+                    font-size: calc(16rem/16);
+                }
+            }
+            &-p{
+                width: 100%;
+                font-size: calc(16rem/16);
+                margin: 1em 0 0;
+            }
+        }
+
+        &__right{
+            overflow: hidden;
+            padding-top: 2em;
+            padding-bottom: 3em;
+            border-radius: 25px;
+            &-title{
+                font-size: calc(24rem / 16);
+                margin-bottom: 1.75rem;
+            }
+            &-results{
+                font-size: calc(16rem / 16);
+               margin-bottom: 16px;
+                .items{
+                    .txt{
+                        margin-left: calc(12em / 16);
+                        font-size: calc(16rem / 16); 
+                    }
+                }
+            }
+            .cobalt-blue{
+                margin-bottom: 0;
+            }
+            &-btn{
+                padding: 1.25em;
+               margin-top: calc(35rem / 16);
+            }
+        }
+    }
+
+}
+
+@media(min-width: 750px){
+
+    .container{
+        width: 85%;
+        max-width: 750px;
+    }
+    .card{
+        
+        &__left{
             padding-top: 2.75em;
             padding-bottom: 3.75em;
             &-title{
@@ -188,21 +251,15 @@ body{
     
                 .score{
                     font-size: calc(72rem/16);
-                    color: $white;
                 }
                 .of{
                     font-size: calc(18rem/16);
-                    color: $lightLavender;
                 }
             }
-            &-great{
-                color: $white;
-            }
             &-p{
-                width: 100%;
-                color: $lightLavender;
+                width: 80%;
                 font-size: calc(18rem/16);
-                margin: 1em 0 0;
+                margin: 1em auto 0;
             }
         }
 
