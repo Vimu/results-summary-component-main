@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1128px;
+}
+
+.card {
+  margin: 0 auto;
+}
+.card__left {
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(to bottom, rgb(46, 43, 233) 0%, rgb(120, 87, 255) 0%, rgb(46, 43, 233) 100%);
+  padding: 2em;
+  border-radius: 0 0 25px 25px;
+}
+.card__left-title {
+  font-size: 1.125 rem;
+  color: hsl(241, 100%, 89%);
+  text-transform: capitalize;
+}
+.card__left-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 1em auto;
+  text-align: center;
+  background: rgb(103, 67, 255);
+  background: linear-gradient(to top, rgb(103, 67, 255) 0%, rgb(36, 33, 202) 100%);
+}
+.card__left-circle .score {
+  font-size: 2.8rem;
+  color: hsl(0, 0%, 100%);
+}
+.card__left-circle .of {
+  font-size: 0.8rem;
+  color: hsl(241, 100%, 89%);
+}
+.card__left-great {
+  color: hsl(0, 0%, 100%);
+}
+.card__left-p {
+  color: hsl(241, 100%, 89%);
+  font-size: 0.8rem;
+  margin: 0.5em auto 0;
+  width: 75%;
+}
+.card__right {
+  width: 100%;
+  padding: 2em;
+  background-color: white;
+}
+.card__right-title {
+  color: hsl(224, 30%, 27%);
+  font-size: 1rem;
+  margin-bottom: 1.2em;
+}
+.card__right-results {
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+.card__right-results .items {
+  display: flex;
+}
+.card__right-results .items .txt {
+  margin-left: 0.5em;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.card__right-results .marks {
+  color: hsl(241, 100%, 89%);
+  font-weight: 500;
+}
+.card__right-results strong {
+  color: hsl(224, 30%, 27%);
+}
+.card__right .light-red {
+  background-color: hsla(0, 100%, 67%, 0.1);
+  color: hsl(0, 100%, 67%);
+}
+.card__right .orangey-yellow {
+  background-color: hsla(39, 100%, 56%, 0.1);
+  color: hsl(39, 100%, 56%);
+}
+.card__right .green-teal {
+  background-color: hsla(166, 100%, 37%, 0.1);
+  color: hsl(166, 100%, 37%);
+}
+.card__right .cobalt-blue {
+  background-color: hsla(234, 85%, 45%, 0.1);
+  color: hsl(234, 85%, 45%);
+}
+.card__right-btn {
+  padding: 1em;
+  width: 100%;
+  border-radius: 35px;
+  border: none;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(224, 30%, 27%);
+  font-weight: 700;
+  cursor: pointer;
+}
+.card__right-btn:hover, .card__right-btn :focus {
+  background-color: hsl(241, 81%, 54%);
+}
+
+@media (min-width: 650px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    min-height: 100vh;
+  }
+  .container {
+    width: 85%;
+    max-width: 650px;
+    border-radius: 25px;
+  }
+  .card {
+    display: flex;
+    box-shadow: 5px 5px 5px 3px rgba(38, 26, 209, 0.281);
+  }
+  .card__left {
+    border-radius: 25px;
+    padding-top: 2.75em;
+    padding-bottom: 3.75em;
+  }
+  .card__left-title {
+    font-size: 1.5rem;
+  }
+  .card__left-circle {
+    width: 200px;
+    height: 200px;
+    margin: 2.2125em auto;
+  }
+  .card__left-circle .score {
+    font-size: 4.5rem;
+    color: hsl(0, 0%, 100%);
+  }
+  .card__left-circle .of {
+    font-size: 1.125rem;
+    color: hsl(241, 100%, 89%);
+  }
+  .card__left-great {
+    color: hsl(0, 0%, 100%);
+  }
+  .card__left-p {
+    width: 100%;
+    color: hsl(241, 100%, 89%);
+    font-size: 1.125rem;
+    margin: 1em 0 0;
+  }
+  .card__right {
+    overflow: hidden;
+    padding-top: 2.75em;
+    padding-bottom: 3.75em;
+    border-radius: 25px;
+  }
+  .card__right-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.75rem;
+  }
+  .card__right-results {
+    font-size: 1.125rem;
+    margin-bottom: 16px;
+  }
+  .card__right-results .items .txt {
+    margin-left: 0.75em;
+    font-size: 1.125rem;
+  }
+  .card__right .cobalt-blue {
+    margin-bottom: 0;
+  }
+  .card__right-btn {
+    padding: 1.25em;
+    margin-top: 2.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */

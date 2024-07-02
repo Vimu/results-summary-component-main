@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+// Variables
+    // Primary
+$lightRed: hsl(0, 100%, 67%);
+$orangeyYellow: hsl(39, 100%, 56%);
+$greenTeal: hsl(166, 100%, 37%);
+$cobaltBlue: hsl(234, 85%, 45%);
+    // Gradients - background
+$lightSlateBlue: hsl(252, 100%, 67%);
+$lightRoyalBlue: hsl(241, 81%, 54%);
+    // circle
+$violetBlue : #4e21ca;
+$persianBlue : #2421ca00;
+    // Neutral
+$white: hsl(0, 0%, 100%);
+$paleBlue: hsl(221, 100%, 96%);
+$lightLavender: hsl(241, 100%, 89%);
+$darkGrayBlue: hsl(224, 30%, 27%);
+
+@mixin flexCenter($direction){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p{
+    font-size: calc(18rem/16);
+}
+body{
+    font-family: "Hanken Grotesk", sans-serif;
+    font-size: 16px;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1128px;
+}
+
+.card{
+    // @include flexCenter(column);
+    margin: 0 auto;
+    // width: 100%;
+    &__left{
+        width: 100%;
+        text-align: center;
+        // background-color: $lightRoyalBlue;
+        background: linear-gradient(to bottom, rgba(46,43,233,1) 0%, rgba(120,87,255,1) 0%, rgba(46,43,233,1) 100%);
+        padding: 2em;
+        border-radius: 0 0 25px 25px;
+        &-title{
+            font-size: (18/16)rem;
+            color: $lightLavender;
+            text-transform: capitalize;
+        }
+        &-circle{
+            @include flexCenter(column);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 1em auto;
+            text-align: center;
+            background: rgb(103,67,255);
+            background: linear-gradient(to top, rgba(103,67,255,1) 0%, rgba(36,33,202,1) 100%);
+            .score{
+                font-size: 2.8rem;
+                color: $white;
+            }
+            .of{
+                font-size: 0.8rem;
+                color: $lightLavender;
+            }
+        }
+        &-great{
+            color: $white;
+        }
+        &-p{
+            color: $lightLavender;
+            font-size: 0.8rem;
+            margin: 0.5em auto 0;
+            width: 75%;
+        }
+    }
+
+    &__right{
+        width: 100%;
+        padding: 2em;
+        background-color: white;
+        &-title{
+            color: $darkGrayBlue;
+            font-size: 1rem;
+            margin-bottom: 1.2em;
+        }
+        &-results{
+            padding: 01rem;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1em;
+            .items{
+                display: flex;
+                .txt{
+                    margin-left: 0.5em;
+                    font-weight: 500;
+                    font-size: 1rem;
+                }
+            }
+            .marks{
+                color: $lightLavender;
+                font-weight: 500;
+            }
+            strong{
+                color: $darkGrayBlue;
+            }
+        }
+
+        .light-red{
+            background-color:  hsl(0, 100%, 67%, 0.1);
+            color: $lightRed;
+        }
+        .orangey-yellow{
+            background-color: hsl(39, 100%, 56%, 0.1);
+            color: $orangeyYellow;
+        }
+        .green-teal{
+            background-color: hsl(166, 100%, 37%, 0.1);
+            color: $greenTeal;
+        }
+        .cobalt-blue{
+            background-color: hsl(234, 85%, 45%, 0.1);
+            color: $cobaltBlue;
+        }
+
+        &-btn{
+            padding: 1em;
+            width: 100%;
+            border-radius: 35px;
+            border: none;
+            color: $white;
+            background-color: $darkGrayBlue;
+            font-weight: 700;
+            cursor: pointer;
+            &:hover, :focus{
+                background-color: $lightRoyalBlue;
+            }
+        }
+    }
+}
+
+
+@media(min-width: 650px){
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        min-height: 100vh;
+    }
+    .container{
+        width: 85%;
+        max-width: 650px;
+        border-radius: 25px;
+    }
+    .card{
+        display: flex;
+        box-shadow: 5px 5px 5px 3px rgba(38, 26, 209, 0.281);
+        // height: 80vh;
+        &__left{
+            border-radius: 25px;
+            padding-top: 2.75em;
+            padding-bottom: 3.75em;
+            &-title{
+                font-size: calc(24rem/16); //check
+            }
+            &-circle{
+                // @include flexCenter(column);
+                width: 200px;
+                height: 200px;
+                margin: 2.2125em auto;
+    
+                .score{
+                    font-size: calc(72rem/16);
+                    color: $white;
+                }
+                .of{
+                    font-size: calc(18rem/16);
+                    color: $lightLavender;
+                }
+            }
+            &-great{
+                color: $white;
+            }
+            &-p{
+                width: 100%;
+                color: $lightLavender;
+                font-size: calc(18rem/16);
+                margin: 1em 0 0;
+            }
+        }
+
+        &__right{
+            overflow: hidden;
+            padding-top: 2.75em;
+            padding-bottom: 3.75em;
+            border-radius: 25px;
+            &-title{
+                font-size: calc(24rem / 16);
+                margin-bottom: 1.75rem;
+            }
+            &-results{
+                font-size: calc(18rem / 16);
+               margin-bottom: 16px;
+                .items{
+                    .txt{
+                        margin-left: calc(12em / 16);
+                        font-size: calc(18rem / 16); 
+                    }
+                }
+            }
+            .cobalt-blue{
+                margin-bottom: 0;
+            }
+            &-btn{
+                padding: 1.25em;
+               margin-top: calc(40rem / 16);
+            }
+        }
+    }
+}
+
